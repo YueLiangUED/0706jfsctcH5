@@ -1,0 +1,78 @@
+@charset "utf-8";
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+.pop {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    margin-left: -3.27rem;
+    width: 6.54rem;
+    height: 8.83rem;
+    background: url("../images/pop-bg.png") no-repeat center;
+    background-size:  100% 100%;
+    z-index: 1010;
+    box-sizing: border-box;
+    font-size: 0.4rem;
+    color: #333;
+    text-align: center;
+    display: none;
+}
+.close-pop {
+    position: absolute;
+    top: 2.2rem;
+    right: 0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: url("../images/pop-close.png") no-repeat center;
+    background-size:  100% 100%;
+}
+.pop-title {
+    position: absolute;
+    top: 2.9rem;
+    width: 100%;
+    font-size: 0.5rem;
+}
+.pop-num {
+    position: absolute;
+    top: 3.66rem;
+    width: 100%;
+}
+.pop-num span {
+    color: #ff0024;
+    font-size: 0.5rem;
+    text-decoration: underline;
+}
+.pop-hf {
+    position: absolute;
+    top: 4.42rem;
+    width: 100%;
+}
+.pop-tip {
+    position: absolute;
+    bottom: 2.06rem;
+    width: 100%;
+    font-size: 0.24rem;
+}
+.pop-btn {
+    position: absolute;
+    bottom: 0.6rem;
+    height: 0.92rem;
+    width: 100%;
+    line-height: 0.92rem;
+}
+.lq-btn {
+    display: inline-block;
+    width: 5.22rem;
+    height: 100%;
+    font-size: 0.5rem;
+    color: #fff;
+    background: -webkit-linear-gradient(#fb7d04, #f9bd00); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#fb7d04, #f9bd00); /* Opera 11.1 - 12.0 */
+    background: linear-gradient(#fb7d04, #f9bd00); /* 标准的语法 */
+    border-radius: 0.46rem;
+}

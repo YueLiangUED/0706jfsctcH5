@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />  
+    <meta name="apple-mobile-web-status-bar-style" content="black" />
+    <meta name="format-detecition" content="telephone=no" /> 
+    <meta name="format-detection" content="email=no" />
+    <script type="text/javascript">
+        ;(function(global){
+            function remChange(){
+                document.documentElement.style.fontSize=100*document.documentElement.clientWidth/750+'px';
+            }
+            remChange();
+            global.addEventListener('resize',remChange,false);
+        })(window);
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/reset-app.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/zepto.min.js" type="text/javascript"></script>
+    <title>无标题文档</title>
+</head>
+<body>
+    <!-- 页面html代码开始 -->
+    <div id="mask" class="mask"></div>
+    <div class="pop">
+        <div class="close-pop"></div>
+        <p class="pop-title">恭喜您！</p>
+        <p class="pop-num">（尾号为<span>99</span>的用户）</p>
+        <p class="pop-hf">您可领取50元话费</p>
+        <p class="pop-tip">注：话费将在3-7个工作日到账</p>
+        <div class="pop-btn">
+            <a class="lq-btn" href="javascript:;">点击领取</a>
+        </div>
+        
+    </div>
+    <!-- 页面html代码结束 -->
+    <script>
+        $(document).ready(function(){
+            var $mask = $('#mask');
+            var winW = $(window).width(),
+                winH = $(window).height();
+            function show() {
+                $mask.width(winW);
+                $mask.height(winH);
+                $mask.show();
+                $('.pop').show();
+            };
+            function hide(pop) {
+                $mask.hide();
+                pop.hide();
+            };
+            // 如果不让弹窗显示，请将下面这局代码去掉
+            show();
+
+            $('.close-pop').on('tap', function () {
+                var $pop = $(this).parents('.pop');
+                 hide($pop);
+            });
+            $mask.on('tap', function () {
+                var $pop = $('.pop');
+                 hide($pop);
+            });
+            $('.lq-btn').on('tap', function () {
+                var $pop = $(this).parents('.pop');
+                 hide($pop);
+            });
+        });
+    </script>
+</body>
+</html>
